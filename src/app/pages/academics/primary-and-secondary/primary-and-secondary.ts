@@ -1,0 +1,46 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
+@Component({
+  selector: 'app-primary-and-secondary',
+  imports: [PdfViewerModule,CommonModule],
+  templateUrl: './primary-and-secondary.html',
+  styleUrl: './primary-and-secondary.css',
+})
+export class PrimaryAndSecondary {
+pdfSrc = '/assets/files/Primary.pdf';
+//pdfSrc = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+
+page = 1;
+totalPages = 0;
+zoom = 0.5;
+
+afterLoad(pdf: any) {
+  this.totalPages = pdf.numPages;
+  this.fitToPage();
+}
+
+fitToPage() {
+  // Adjust zoom for screen size (trial-tested values)
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    this.zoom = 0.6;
+  } else if (screenWidth < 1200) {
+    this.zoom = 0.8;
+  } else {
+    this.zoom = 0.5;
+  }
+}
+
+nextPage() {
+  if (this.page < this.totalPages) this.page++;
+}
+
+prevPage() {
+  if (this.page > 1) this.page--;
+}
+
+
+}
