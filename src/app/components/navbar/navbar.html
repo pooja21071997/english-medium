@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/">HOME</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/">HOME</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/about">ABOUT US</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/about">ABOUT US</a>
         </li>
 
         <!-- SECTION Dropdown -->
@@ -33,27 +33,42 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" routerLink="/facilities/educational-facilities"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/educational-facilities"
                 >Educational Facilities</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/counselling-center"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/counselling-center"
                 >Counselling Center</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/sports-facilities"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/sports-facilities"
                 >Sports Facilities</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/multipurpose-hall"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/multipurpose-hall"
                 >Multipurpose Hall</a
               >
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/facilities/transport-facilities"
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/facilities/transport-facilities"
                 >Transport Facilities</a
               >
             </li>
@@ -65,9 +80,16 @@
             Academics
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/academics/pre-primary">Pre Primary</a></li>
             <li>
-              <a class="dropdown-item" routerLink="/academics/primary-and-secondary"
+              <a class="dropdown-item" (click)="closeNavbar()" routerLink="/academics/pre-primary"
+                >Pre Primary</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="closeNavbar()"
+                routerLink="/academics/primary-and-secondary"
                 >Primary & Secondary</a
               >
             </li>
@@ -86,7 +108,9 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link fw-semibold" routerLink="/contact-us">Contact</a>
+          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLink="/contact-us"
+            >Contact</a
+          >
         </li>
       </ul>
     </div>
