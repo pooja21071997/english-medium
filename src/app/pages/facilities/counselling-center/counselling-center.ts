@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './counselling-center.css',
 })
 export class CounsellingCenter {
+ngAfterViewInit() {
+  setTimeout(() => {
+    document.querySelectorAll('.appear-left, .appear-right')
+      .forEach(el => el.classList.add('active'));
+  }, 200);
+}
 
 }

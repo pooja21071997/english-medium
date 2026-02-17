@@ -1,0 +1,143 @@
+/* Section Background */
+.sports-section {
+  background: linear-gradient(135deg, #f4fbf6, #eef7ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle energy glow */
+.sports-section::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #c8f7dc, transparent 70%);
+  z-index: 0;
+}
+
+.sports-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image */
+.sports-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.sports-img {
+  transition: transform 0.6s ease;
+  border-radius: 20px;
+}
+
+.sports-img:hover {
+  transform: scale(1.07);
+}
+
+/* Sports Week Badge */
+.sports-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 128, 0, 0.85);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.sports-header h2 {
+  color: #1b4332;
+}
+
+.sports-icon {
+  color: #2d6a4f;
+  animation: bounceIcon 2.5s infinite;
+}
+
+/* Animated underline */
+.sports-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #2d6a4f, #40916c);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.sports-header:hover .line {
+  width: 140px;
+}
+
+/* Card */
+.sports-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Text */
+.sports-text {
+  color: #495057;
+  line-height: 1.8;
+}
+
+/* Sports Items */
+.sports-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.sports-item {
+  background: #e9f5ee;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.sports-item i {
+  color: #2d6a4f;
+}
+
+.sports-item:hover {
+  background: #d8f3dc;
+  transform: translateY(-3px);
+}
+
+/* Entrance Animation */
+.appear-left,
+.appear-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-left {
+  transform: translateX(-50px);
+}
+
+.appear-right {
+  transform: translateX(50px);
+}
+
+.appear-left.active,
+.appear-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Icon bounce animation */
+@keyframes bounceIcon {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

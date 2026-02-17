@@ -1,0 +1,143 @@
+/* Section Background */
+.hall-section {
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Spotlight glow effect */
+.hall-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #dbeafe, transparent 70%);
+  z-index: 0;
+}
+
+.hall-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.hall-header h2 {
+  color: #1e293b;
+}
+
+.hall-icon {
+  color: #2563eb;
+  animation: floatHall 3s ease-in-out infinite;
+}
+
+/* Underline animation */
+.hall-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.hall-header:hover .line {
+  width: 180px;
+}
+
+/* Image */
+.hall-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hall-img {
+  border-radius: 20px;
+  transition: transform 0.6s ease;
+}
+
+.hall-img:hover {
+  transform: scale(1.06);
+}
+
+/* Badge */
+.hall-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(37, 99, 235, 0.9);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Card */
+.hall-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+/* Text */
+.hall-text {
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* Feature items */
+.hall-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.hall-item {
+  background: #f1f5f9;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.hall-item i {
+  color: #2563eb;
+}
+
+.hall-item:hover {
+  background: #e0f2fe;
+  transform: translateY(-3px);
+}
+
+/* Entrance animation */
+.appear-left,
+.appear-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-left {
+  transform: translateX(-50px);
+}
+
+.appear-right {
+  transform: translateX(50px);
+}
+
+.appear-left.active,
+.appear-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating icon */
+@keyframes floatHall {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

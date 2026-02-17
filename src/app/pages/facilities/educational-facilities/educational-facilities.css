@@ -1,0 +1,540 @@
+/* Section Background */
+.campus-highlight {
+  background: linear-gradient(135deg, #0f172a, #085564);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass Card */
+.campus-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.campus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Header */
+.campus-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.campus-icon {
+  font-size: 2rem;
+  color: #85eafd;
+}
+
+/* Text */
+.campus-text {
+  color: #dbeafe;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Subtle Fade + Slide Up Animation */
+.appear-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.appear-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Light Elegant Background */
+.classroom-section-light {
+  background: linear-gradient(135deg, #f8fbff, #eef7ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle soft glow */
+.classroom-section-light::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #d6ecff, transparent 70%);
+  z-index: 0;
+}
+
+.classroom-section-light .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image styling */
+.image-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.classroom-img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.classroom-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 119, 255, 0.15);
+}
+
+/* Heading */
+.classroom-heading h2 {
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.classroom-icon {
+  color: #1299b4;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.animated-line {
+  width: 60px;
+  height: 4px;
+  background: #1299b4;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.classroom-heading:hover + .line {
+  width: 180px;
+}
+
+/* Text */
+.classroom-text {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Entrance Animation (Angular Safe) */
+.appear-left,
+.appear-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-left {
+  transform: translateX(-50px);
+}
+
+.appear-right {
+  transform: translateX(50px);
+}
+
+.appear-left.active,
+.appear-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Soft floating icon animation */
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.class-title:hover + .line{
+    width:180px;
+}
+/* Light Soft Science Background */
+.science-section {
+  background: linear-gradient(135deg, #f6fbff, #eefaf7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow effect */
+.science-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #d4f5ec, transparent 70%);
+  z-index: 0;
+}
+
+.science-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image Styling */
+.science-img-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.science-img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.science-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 35px rgba(0, 150, 136, 0.15);
+}
+
+/* Heading */
+.science-heading h2 {
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.science-icon {
+  color: #16a34a;
+  animation: floatScience 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.science-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #16a34a, #22c55e);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.science-heading:hover + .line {
+  width: 180px;
+}
+
+/* Text */
+.science-text {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Entrance Animation (Angular Safe) */
+.appear-sci-left,
+.appear-sci-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-sci-left {
+  transform: translateX(-50px);
+}
+
+.appear-sci-right {
+  transform: translateX(50px);
+}
+
+.appear-sci-left.active,
+.appear-sci-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating icon animation */
+@keyframes floatScience {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+/* Light Intellectual Background */
+.math-section {
+  background: linear-gradient(135deg, #f9faff, #f2f5ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow */
+.math-section::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #e0e7ff, transparent 70%);
+  z-index: 0;
+}
+
+.math-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image */
+.math-img-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.math-img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.math-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.15);
+}
+
+/* Heading */
+.math-heading h2 {
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.math-icon {
+  color: #6366f1;
+  animation: floatMath 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.math-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #6366f1, #818cf8);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.math-heading:hover + .line {
+  width: 180px;
+}
+
+/* Text */
+.math-text {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Entrance Animation (Angular Safe) */
+.appear-math-left,
+.appear-math-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-math-left {
+  transform: translateX(-50px);
+}
+
+.appear-math-right {
+  transform: translateX(50px);
+}
+
+.appear-math-left.active,
+.appear-math-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating icon */
+@keyframes floatMath {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+/* Soft Technology Background */
+.computer-section {
+  background: linear-gradient(135deg, #f5fbff, #eef6ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle digital glow */
+.computer-section::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #dbeafe, transparent 70%);
+  z-index: 0;
+}
+
+.computer-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image styling */
+.computer-img-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.computer-img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.computer-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+}
+
+/* Heading */
+.computer-heading h2 {
+  color: #0f172a;
+  letter-spacing: 0.5px;
+}
+
+.computer-icon {
+  color: #2563eb;
+  animation: floatComputer 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.computer-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.computer-heading:hover + .line {
+  width: 180px;
+}
+
+/* Text */
+.computer-text {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Entrance Animation (Angular Safe) */
+.appear-comp-left,
+.appear-comp-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-comp-left {
+  transform: translateX(-50px);
+}
+
+.appear-comp-right {
+  transform: translateX(50px);
+}
+
+.appear-comp-left.active,
+.appear-comp-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating icon animation */
+@keyframes floatComputer {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+/* Soft Library Background */
+.library-section {
+  background: linear-gradient(135deg, #fdfaf6, #f6f1e9);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle warm glow */
+.library-section::before {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #f3e8d3, transparent 70%);
+  z-index: 0;
+}
+
+.library-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image styling */
+.library-img-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.library-img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.library-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(139, 94, 60, 0.15);
+}
+
+/* Heading */
+.library-heading h2 {
+  color: #3b2f2f;
+  letter-spacing: 0.5px;
+}
+
+.library-icon {
+  color: #8b5e3c;
+  animation: floatLibrary 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.library-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #8b5e3c, #c19a6b);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.library-heading:hover + .line {
+  width: 180px;
+}
+
+/* Text */
+.library-text {
+  color: #5c4b42;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Entrance Animation (Angular Safe) */
+.appear-lib-left,
+.appear-lib-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-lib-left {
+  transform: translateX(-50px);
+}
+
+.appear-lib-right {
+  transform: translateX(50px);
+}
+
+.appear-lib-left.active,
+.appear-lib-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating icon */
+@keyframes floatLibrary {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

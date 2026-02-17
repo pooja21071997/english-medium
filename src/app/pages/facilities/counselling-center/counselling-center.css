@@ -1,0 +1,120 @@
+/* Section Background */
+.counselling-section {
+  background: linear-gradient(135deg, #f7f9fc, #eef3f9);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle floating background circle */
+.counselling-section::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #dbeafe, transparent 70%);
+  z-index: 0;
+}
+
+.counselling-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.counselling-header h2 {
+  color: #34495e;
+}
+
+.counselling-icon {
+  color: #6c63ff;
+  animation: floatBrain 3s ease-in-out infinite;
+}
+
+/* Animated underline */
+.counselling-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, #6c63ff, #00c6ff);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.counselling-header:hover .line {
+  width: 140px;
+}
+
+/* Image */
+.counselling-img-box {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.counselling-img {
+  transition: transform 0.6s ease;
+}
+
+.counselling-img:hover {
+  transform: scale(1.05);
+}
+
+/* Glass Card */
+.counselling-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Text */
+.counselling-text {
+  color: #5a6c7d;
+  line-height: 1.8;
+}
+
+/* Assessment Items */
+.assessment-item {
+  background: #f8fbff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.assessment-item i {
+  color: #00b894;
+}
+
+.assessment-item:hover {
+  background: #e6f0ff;
+  transform: translateX(6px);
+}
+
+/* Entrance Animations */
+.appear-left,
+.appear-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.appear-left {
+  transform: translateX(-50px);
+}
+
+.appear-right {
+  transform: translateX(50px);
+}
+
+.appear-left.active,
+.appear-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating animation */
+@keyframes floatBrain {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

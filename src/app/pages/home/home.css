@@ -5,6 +5,10 @@
   position: relative;
   overflow: hidden;
 }
+.img-about{
+    max-width: 75%;
+    height: auto;
+}
 
 /* Subtle background decorative blur */
 .about-highlight::before {
